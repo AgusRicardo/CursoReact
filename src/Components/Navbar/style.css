@@ -1,0 +1,48 @@
+.navbar {
+    background-color: black;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+.menu {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-right: 30px;
+}
+.menu li {
+    font-size: 20px;
+    list-style-type: none;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+}
+.logo2 {
+    width: 100px;
+}
+
+.home {
+    background-color: #282c34;
+    padding-top: 50px;
+    color: white;
+}
+.home h2 {
+    margin: 0;
+}
+.home h4 {
+    margin: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+    .logo2 {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

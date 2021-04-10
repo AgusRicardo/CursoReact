@@ -1,22 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import ButtonCl from './Components/ButtonCl/ButtonCl'
+import ButtonFc from './Components/ButtonFc/ButtonFc'
+import Navbar from './Components/Navbar/NavBar'
+import ItemListContainer from './Components/ItemListContainer'
 
 function App() {
   return (
     <div className="App">
+        <Navbar/>
+        <ItemListContainer/>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hola, soy Agustín!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <ButtonFc text={'Soy el boton'} color={'red'} padding={'15px'}/> 
       </header>
     </div>
   );
