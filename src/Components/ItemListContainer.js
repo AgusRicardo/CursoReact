@@ -1,15 +1,53 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import ItemList from './ItemList'
 
-const home = () => {
+
+
+const ItemListContainer = () => {
+    const [  arrayItems, setArrayItems ] = useState([])
+    useEffect(()=>{
+        const productos = [
+            {
+                id: 'agaskgabjhkfghfga',
+                title: 'Remera',
+                precio: '$2500',
+                img: 'https://www.guantexindustrial.com.ar/700-large_default/remera-algodon-jersey-azul-talle-xxxl.jpg',
+            },
+            {
+                id: 'agaskgabjewethka',
+                title: 'Pantalón',
+                precio: '$2000',
+                img: 'https://www.clementdesign.com/es/wp-content/uploads/sites/4/products/06CCYCL/06CCYCLNOIR/p_vface.png',
+            },
+            {
+                id: 'agaskgaasdbjhka',
+                title: 'Campera',
+                precio: '$4500',
+                img: 'https://d2r9epyceweg5n.cloudfront.net/stores/143/626/products/campera-undead1-21373735edc521da4815450885284633-1024-1024.png',
+            }
+        ]
+        const productosPromise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(productos)
+            }, 2000);
+        })
+        productosPromise.then((res)=>{
+            setArrayItems(res)
+        })
+        .catch(()=>{
+            console.log('Hubo un problema');
+        })
+        .finally(()=>{
+            console.log('Se ha finalizado');
+        })
+    }, [])
+
     return (
-        <React.Fragment>
-            <div className='home'>
-                <h2>Bienvenidos</h2>
-                <h3>Primeros pasos en React</h3>
-                <h4>Agustin Ricardo</h4>
-            </div>
-        </React.Fragment>
+        <div>
+            <ItemList productos={arrayItems}/>
+        </div>
     )
 }
 
-export default home
+export default ItemListContainer
+
