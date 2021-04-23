@@ -2,8 +2,21 @@
     width: 250px;
 }
 .card {
-    width: 100%;
     display: flex;
-    flex-flow: wrap row;
+    flex-flow: column;
+}
+.contador {
+    display: flex;
     justify-content: center;
+    align-items: center;
+}
+.contador p {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.contador button {
+    width: 45px;
+    height: 20px;
 }
